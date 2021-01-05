@@ -93,5 +93,5 @@ def get_k_neighbors(user_id, rating_data, k):
 rating_data = pd.read_csv(RATING_DATA_PATH, index_col='user_id').values  # 평점 데이터를 불러온다
 filtered_data = filter_users_without_movie(rating_data, 3)  # 3 번째 영화를 보지 않은 유저를 데이터에서 미리 제외시킨다
 filled_data = fill_nan_with_user_mean(filtered_data)  # 빈값들이 채워진 새로운 행렬을 만든다
-user_0_neighbors = get_k_neighbors(0, filled_data, 5)  # 유저 0과 비슷한 5개의 유저 데이터를 찾는다
+user_0_neighbors = get_k_neighbors(0, filled_data, 5)  # 유저 0과 비슷한 5개 의 유저 데이터를 찾는다
 print(user_0_neighbors)
