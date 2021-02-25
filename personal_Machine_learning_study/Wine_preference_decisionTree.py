@@ -18,7 +18,7 @@ grape_variety = {
 
 
 #데이터 불러오기
-data = pd.read_csv('C:/Users/공성식/Desktop/WORKSTATION/Workstation_data/skykongkong_wine_data.csv')
+data = pd.read_csv('./skykongkong_wine_data.csv')
 
 #Feature Engineering
 
@@ -91,7 +91,7 @@ def check_your_wine(model, grape_variety,data):
         print(f'당신이 전혀 좋아하지 않는 스타일의 와인입니다. 예상 평점 : {prediction}')
     wanna_record = int(input('방금 예측한 와인의 평점을 매기시겠습니까? : [예 : 1, 아니오 : 0] : '))
     if wanna_record ==1:
-        with open('C:/Users/공성식/Desktop/WORKSTATION/Workstation_data/skykongkong_wine_data.csv','a') as f:
+        with open('./skykongkong_wine_data.csv','a') as f:
             your_score = float(input('당신의 평가를 적어주세요. 학습한 뒤 더 나은 기능을 제공합니다! : '))
             f.write(f'\n{Grape_Variety},{Color},{Oak},{Vivino},{RedFruit},{BlackFruit},{Earthy},{Spicy},{Citrus},{TreeFruit},{TropicalFruit},{your_score}')
     else:
